@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <body>
+        <script>
+            var myString = new String("bar");
+            var myNumber = new Number(123);
+            var myBool = new Boolean(true);
+            var myObject = new Object();
+            var myArray = new Array('foo','bar');
+            var myFunction = new Function ("x","y","return x**y");
+            var today = new Date();
+            var myRegEx = new RegExp('/b/t[a-z]+/b');
+            var myError = new Error("hello!");
+
+            console.log(myString.constructor);
+            console.log(myNumber.constructor);
+            console.log(myBool.constructor);
+            console.log(myObject.constructor);
+            console.log(myArray.constructor);
+            console.log(today.constructor);
+            console.log(myRegEx.constructor);
+            console.log(myError.constructor);
+        </script>
+    </body>
+</html> 

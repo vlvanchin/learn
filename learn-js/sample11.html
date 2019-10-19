@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <script>
+        // all object from constructor function
+        var myString = new String('foo');
+        var myNumber = new Number(23);
+        var myBool = new Boolean(false);
+        var myObject = new Object();
+        var myArray = new Array ('foo','bar','zoo');
+        var myFn = new Function('x','y','return x * y');
+        var myReg = new RegExp('\bt[a-z]+\b');
+
+        // all vars as literals
+        var myStringLit = 'foo';
+        var myNumberLit = 23;
+        var myBoolLit = false;
+        var myObjectLit = {};
+        var myArrayLit = ['foo','bar','zoo'];
+        var myFnLit = function(x,y) { return x*y; };
+        var myRegLit = /\bt[a-z]+\b/;
+
+        // display to console
+        console.log(myString, myStringLit);
+        console.log(myNumber, myNumberLit);
+        console.log(myBool, myBoolLit);
+        console.log(myObject, myObjectLit);
+        console.log(myArray, myArrayLit);
+        console.log(myFn,myFnLit);
+        console.log(myReg,myRegLit);
+    </script>
+</body>
+</html>

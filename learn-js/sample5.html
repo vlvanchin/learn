@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+        <script>
+            var Person = function (living, age, gender) {
+                this.living = living;
+                this.age = age;
+                this.gender = gender;
+
+                this.getGender = function() {
+                    return this.gender;
+                };
+            }
+
+            var codyB = new Person(true,53,'male');
+            console.log(codyB);
+
+            var codyA = new Object();
+            codyA.living = true;
+            codyA.age = 53;
+            codyA.gender = 'male';
+            codyA.getGender = function () {
+                return codyA.gender;
+            };
+
+            console.log(codyA)
+        </script>
+    </body>
+</html>

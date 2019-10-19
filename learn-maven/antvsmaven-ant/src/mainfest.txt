@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Build-By: vanchin
+Class-Path:
+Build-Jdk: 1.8.0_144
+Main-Class: com.vlv.example.HelloWorld

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <body>
+
+        <div id='maindiv'>
+            <p class='main-class'>
+                <h1>main class</h1>
+                <h4>test the text</h4>
+            </p>
+            <p class='main-class2'>
+                <h1>main class2</h1>
+                <h4>line 1</h4>
+                <h4>line 2</h4>
+                <h4>line 3</h4>
+            </p>
+            <p class='main'>
+                <h1>main</h1>
+                <h4>test the text</h4>
+            </p>
+        </div>
+
+        <script
+            src="https://code.jquery.com/jquery-3.4.1.js"
+            integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+            crossorigin="anonymous"></script>
+        <script>
+
+            document.write('hello');
+            function setCookie (name, value, days) {
+                var date = new Date();
+                date.setTime(date.getTime() + (days*24*60*60*1000));
+                var exp = '; expires=' + date.toUTCString() ;
+                window.document.cookie = name + '=' + value + exp + '; path=/home/vanchin/Documents/git/lean/learn-js/testCookie.html';
+            }
+
+            function getCookies() {
+                var cArray = window.document.cookie.split(';');
+                for (var i=0; i < cArray.length ; i++) {
+                    var cookie = cArray[i];
+                    document.writeln(cookie);
+                }
+            }
+
+            window.setCookie("name", "van", 1);
+            window.setCookie('test','sample', 1);
+            document.writeln('<h2>cookies</h2>');
+            window.getCookies();
+        </script>
+    </body>
+</html>

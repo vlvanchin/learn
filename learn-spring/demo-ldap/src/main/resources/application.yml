@@ -4,11 +4,11 @@ server:
 spring:
   ldap:
     embedded:
-      ldif: classpath:schema.ldif
-      port: 12345
+      ldif: resources:test-server.ldif
+      port: 389
       validation:
         enabled: false
-      base-dn: dc=memorynotfound, dc=com
+      base-dn: dc=springframework, dc=com
       credential:
         username: uid=admin
         password: secret

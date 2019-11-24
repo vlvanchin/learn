@@ -1,2 +1,14 @@
 server:
   port: 0
+  
+spring:
+  ldap:
+    embedded:
+      ldif: classpath:schema.ldif
+      port: 12345
+      validation:
+        enabled: false
+      base-dn: dc=memorynotfound, dc=com
+      credential:
+        username: uid=admin
+        password: secret

@@ -80,7 +80,8 @@ for building with using the cache contents try the above command with `--no-cach
 ```
 $ docker run -p 4000:80 friendlyhello
 ```
-to run the container in port 80 in detached mode (-d), view the application using http://localhost
+
+to run the container in port 80 in detached mode (-d), view the application using http://localhost or `curl http://localhost`
 
 ```
 $ docker run -d -p 80:80 friendlyhello

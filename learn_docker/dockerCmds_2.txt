@@ -1,0 +1,1000 @@
+  193  ssh-keygen -h
+  194  ls
+  195  ssh-copy-id -h
+  196  ssh-copy-id cloud_user@3.1.80.179
+  197  ssh cloud_user@3.1.80.179
+  198  exit
+  199  clear
+  200  ls
+  201  cd Documents/
+  202  ls
+  203  tree
+  204  cd ..
+  205  Downloads/
+  206  cd Downloads/
+  207  tree
+  208  sudo snap list tree
+  209  sudo snap list -h
+  210  snap list tree
+  211  snap -h
+  212  snap find tree
+  213  git --version
+  214  apt -h
+  215  apt list tree
+  216  apt list git
+  217  snap list git
+  218  snap find  git
+  219  clear
+  220  sudo snap install tree
+  221  tree
+  222  clear
+  223  cd ..
+  224  cat /etc/X11/Xsession.d/
+  225  ls /etc/X11/Xsession.d/
+  226  history
+  227  sudo snap -h
+  228  sudo snap remove tree
+  229  tree
+  230  clear
+  231  sudo apt install tree
+  232  clear
+  233  tree
+  234  exit
+  235  tree
+  236  banner hello
+  237  sudo apt install banne
+  238  sudo apt install banner
+  239  sudo apt install sysvbanner
+  240  banner hello
+  241  cal
+  242  cal march
+  243  cal 2020
+  244  exit
+  245  sudo apt-get update
+  246  sudo apt-get upgrade -y
+  247  sudo apt-get install duplicity
+  248  clear
+  249  ls
+  250  docker
+  251  sudo apt-get remove docker docker-engine docker.io containerd runc
+  252  sudo apt-get update
+  253  sudo apt-get install     apt-transport-https     ca-certificates     curl     gnupg-agent     software-properties-common
+  254  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+  255  sudo apt-key fingerprint 
+  256  sudo apt-key fingerprint 0EBFCD88
+  257  sudo add-apt-repository    "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+  258     $(lsb_release -cs) \
+  259     stable"
+  260  lsb_release -cs
+  261  lsb_release 
+  262  sudo apt-get update
+  263  sudo apt-get install docker-ce docker-ce-cli containerd.io
+  264  apt-cache madison docker-ce
+  265  docker --version
+  266  docker-ce
+  267  sudo docker run hello-world
+  268  echo $USER
+  269  $USER
+  270  sudo groupadd docker
+  271  groups
+  272  groups --all
+  273  groups --help
+  274  sudo usermod -aG docker $USER
+  275  exit
+  276  docker ps
+  277  sudo docker ps
+  278  exit
+  279  clear
+  280  docker run hello-world
+  281  ls -al
+  282  sudo chown "$USER":"$USER" /home/"$USER"/.docker -R
+  283  sudo systemctl enable docker
+  284  sudo systemctl disable docker
+  285  sudo systemctl status docker
+  286  sudo systemctl disable docker
+  287  sudo systemctl status docker
+  288  sudo systemctl stop docker
+  289  docker ps
+  290  sudo systemctl start docker
+  291  chkconfig docker
+  292  sudo chkconfig docker
+  293  sudo chkconfig docker on
+  294  clear
+  295  ls -l /etc/docker
+  296  docker ps
+  297  docker images
+  298  pwd
+  299  touch /etc/docker/daemon.json
+  300  sudo touch /etc/docker/daemon.json
+  301  sudo vim /etc/docker/daemon.json 
+  302  ls -l /etc/docker/
+  303  docker log
+  304  docker logs
+  305  docker logs -h
+  306  docker logs --details
+  307  docker ps
+  308  docker ps -a
+  309  docker logs priceless_perlman 
+  310  docker logs priceless_perlman hungry_lehmann
+  311  docker logs hungry_lehmann 
+  312  ls
+  313  ls -al
+  314  clear
+  315  terminal -h
+  316  sudo vim /etc/docker/daemon.json 
+  317  ls -l /etc/docker
+  318  docker info
+  319  docker info --format 
+  320  docker info --format '{{ .LoggingDriver }}'
+  321  docker ps -a
+  322  docker inspect priceless_perlman 
+  323  cat /var/lib/docker/containers/1fc818f95cb6454992cb92ed5269345e92feedb1a6ad5ffed2c2b92bfd3a7c64/1fc818f95cb6454992cb92ed5269345e92feedb1a6ad5ffed2c2b92bfd3a7c64-json.log
+  324  sudo cat /var/lib/docker/containers/1fc818f95cb6454992cb92ed5269345e92feedb1a6ad5ffed2c2b92bfd3a7c64/1fc818f95cb6454992cb92ed5269345e92feedb1a6ad5ffed2c2b92bfd3a7c64-json.log
+  325  clear
+  326  exit
+  327  docker ps
+  328  ls
+  329  ls -a
+  330  cd .d*
+  331  ls -a .d*
+  332  newgrp docker
+  333  exit
+  334  docker ps -a
+  335  docker logs priceless_perlman 
+  336  docker inspect priceless_perlman 
+  337  sudo cat /var/lib/docker/containers/1fc818f95cb6454992cb92ed5269345e92feedb1a6ad5ffed2c2b92bfd3a7c64/1fc818f95cb6454992cb92ed5269345e92feedb1a6ad5ffed2c2b92bfd3a7c64-json.log
+  338  syslog -h
+  339  journald -h
+  340  journal -h
+  341  clear
+  342  docker ps
+  343  docker ps -a
+  344  docker -h
+  345  curl -L https://github.com/docker/compose/releases/download/1.25.4/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
+  346  sudo curl -L https://github.com/docker/compose/releases/download/1.25.4/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
+  347  ls -al /usr/local/bin/
+  348  sudo chmod +x /usr/local/bin/docker-compose
+  349  ls -al /usr/local/bin/
+  350  docker-compose --version
+  351  docker-compose -h
+  352  ls
+  353  cd Documents/
+  354  ls
+  355  mkdir hello-world
+  356  cd hello-world/
+  357  ls
+  358  vim docker-compose.yml
+  359  docker-compose yp
+  360  docker-compose up
+  361  docker images
+  362  docker ps -a
+  363  exit
+  364  docker ps
+  365  docker ps -a
+  366  docker rmi 207c
+  367  docker images
+  368  docker rmi fce2
+  369  docker rm 207c 8612 1fc8
+  370  docker ps -a
+  371  docker rmi 207c
+  372  docker images
+  373  docker rmi fce2
+  374  docker ps -a
+  375  docker images
+  376  pwd
+  377  cd Documents/hello-world/
+  378  docker-compose up
+  379  clear
+  380  history | grep docker
+  381  clear
+  382  cd ..
+  383  clear
+  384  sudo apt update
+  385  sudo apt upgrade
+  386  clear
+  387  wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
+  388  wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key add -
+  389  sudo add-apt-repository "deb http://download.virtualbox.org/virtualbox/debian bionic contrib"
+  390  sudo apt update
+  391  uname -a
+  392  lsb_release 
+  393  lsb_release -h
+  394  lsb_release -a
+  395  vim /etc/apt/sources.list
+  396  sudo apt-get install virtualbox-6.1
+  397  clear
+  398  docker --version
+  399  VBoxManage --version
+  400  base=https://github.com/docker/machine/releases/download/v0.16.0 && curl -L $base/docker-machine-$(uname -s)-$(uname -m) >/tmp/docker-machine && sudo install /tmp/docker-machine /usr/local/bin/docker-machine
+  401  docker-machine --version
+  402  base=https://raw.githubusercontent.com/docker/machine/v0.16.0
+  403  for i in docker-machine-prompt.bash docker-machine-wrapper.bash docker-machine.bash; do sudo wget "$base/contrib/completion/bash/${i}" -P /etc/bash_completion.d; done
+  404  exit
+  405  clear
+  406  exit
+  407  docker
+  408  docker-machine version
+  409  docker-machine create --driver=virtualbox default
+  410  docker-machine ls
+  411  docker-machine use default
+  412  eval $(docker-machine env default)
+  413  docker images
+  414  docker image pull hello-world
+  415  docker images
+  416  docker images list
+  417  docker image list
+  418  docker-machine active
+  419  clear
+  420  docker-machine ls
+  421  docker-machine active
+  422  docker-machine ssh default
+  423  docker-machine use -u
+  424  docker-machine active
+  425  docker-machine stop default
+  426  docker-machine ls
+  427  exit
+  428  sudo apt update
+  429  sudo apt upgrade -y
+  430  clear
+  431  rsyslog 
+  432  clear
+  433  crontab -l -u van
+  434  ls
+  435  cd Documents/
+  436  ls
+  437  cd hello-world/
+  438  l
+  439  cat docker-compose.yml 
+  440  docker ps 
+  441  history | grep docker
+  442  systemctl status docker
+  443  systemctl start docker
+  444  systemctl enable docker
+  445  sudo systemctl start docker
+  446  sudo systemctl enable docker
+  447  systemctl status docker
+  448  sudo systemctl start docker
+  449  journalctl -xe
+  450  docker-compose stop
+  451  docker start
+  452  docker ps -a
+  453  docker-machine --version
+  454  docker-machine --help
+  455  journalctl -xe
+  456  history | grep systemd
+  457  history | grep docker
+  458  sudo -i
+  459  history | grep docker
+  460  docker ps 
+  461  sudo apt-get remove docker docker-engine docker.io containerd runc
+  462  sudo apt-get install docker-ce docker-ce-cli containerd.io
+  463  sudo apt autoremove
+  464  docker ps
+  465  systemctl start docker
+  466  systemctl status docker.service
+  467  sudo apt-get remove docker docker-engine docker.io containerd runc
+  468  apt-cache madison docker-ce
+  469  sudo systemctl enable docker
+  470  sudo systemctl start docker
+  471  sudo systemctl status docker
+  472  docker-compose up -d
+  473  docker-machine start default
+  474  docker-machine env
+  475  docker-compose up -d
+  476  docker ps
+  477  history
+  478  history | grep mkdir
+  479  systemctl edit docker.service
+  480  sudo systemctl edit docker.service
+  481  cd /etc/systemd/system/docker.service.d/
+  482  ls
+  483  cat hosts.conf 
+  484  mv hosts.conf hosts.conf.old
+  485  sudo mv hosts.conf hosts.conf.old
+  486  vim override.conf
+  487  sudo vim override.conf
+  488  sudo systemctl daemon-reload
+  489  sudo systemctl restart docker.service
+  490  sudo systemctl enable docker.server
+  491  sudo systemctl enable docker.service
+  492  sudo systemctl restart docker.service
+  493  sudo systemctl status docker
+  494  ls
+  495  docker ps
+  496  systemd
+  497  man systemd
+  498  systemctl status docker
+  499  sudo apt --help
+  500  sudo apt autoremove docker
+  501  clear
+  502  history | grep "installed docker
+  503  :
+  504  "
+  505  history | grep "installed docker"
+  506  history | grep "docker"
+  507  history | grep "docker"
+  508  sudo apt-get install docker-ce docker-ce-cli containerd.io
+  509  sudo apt package lists
+  510  sudo apt lists
+  511  sudo apt --list
+  512  sudo apt-get purge docker-ce
+  513  sudo ls -lart /var/lib/docker
+  514  sudo ls -lart /var/lib/
+  515  sudo ls -lart /var/lib/d*
+  516  sudo apt-get remove docker docker-engine docker.io containerd runc
+  517  ls -lart *dock*
+  518  ls -lart .*dock*
+  519  ls -lart .docker/
+  520  cd .docker/
+  521  ls
+  522  cd machine/
+  523  ls
+  524  clear
+  525  cd 
+  526  ls
+  527  sudo apt-get purge docker-engine
+  528  sudo apt-get autoremove  --purge docker-engine
+  529  ls -lart /var/lib/
+  530  ls -lart /var/lib/d*
+  531  ls -lart /var/lib/docker
+  532  sudo find / -name '*docker*'
+  533  dpkg -1 | grep -i docker
+  534  dpkg -l | grep -i docker
+  535  sudo apt-get purge -y docker-engine docker docker.io docker-ce docker-ce-cli
+  536  sudo apt-get autoremove -y --purge docker-engine docker docker-io docker-ce docker-ce-cli
+  537  sudo rm -rf /var/lib/docker /etc/docker
+  538  sudo rm /etc/apparmor.d/docker
+  539  sudo groupdel docker
+  540  sudo rm -rf /var/run/docker.sock
+  541  clear
+  542  shutdown -r now
+  543  mouse
+  544  exit
+  545  docker ps
+  546  snap info docker
+  547  sudo apt-get update
+  548  sudo apt-get install     apt-transport-https     ca-certificates     curl     gnupg-agent     software-properties-common
+  549  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+  550  sudo apt-key fingerprint 0EBFCD88
+  551  sudo add-apt-repository    "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+  552     $(lsb_release -cs) \
+  553     stable"
+  554  sudo apt-get update
+  555  sudo apt-get install docker-ce docker-ce-cli containerd.io
+  556  apt-cache madison docker-ce
+  557  sudo docker run hello-world
+  558  docker ps
+  559  sudo docker ps
+  560  sudo docker ps -a
+  561  sudo groupadd docker
+  562  sudo usermod -aG docker $USER
+  563  shutdown -h now
+  564  curl http://localhost:4000
+  565  exit
+  566  docker ps
+  567  systemctl status docker
+  568  systemctl enable docker
+  569  sudo systemctl enable docker
+  570  clear
+  571  docker images
+  572  docker search ubuntu
+  573  docker login
+  574  docker search node
+  575  docker --help
+  576  docker stats
+  577  docker version
+  578  docker-machine --version
+  579  docker-compose --version
+  580  docker pull vlvanchin/ubuntu-nodejs:latest
+  581  clear
+  582  docker images
+  583  docker run -it -d -rm vlvanchin/ubuntu-nodejs /bin/bash
+  584  docker run -it -d --rm vlvanchin/ubuntu-nodejs /bin/bash
+  585  docker ps
+  586  docker attach awesome_kare 
+  587  docker ps
+  588  docker ps -a
+  589  docker start youthful_mendeleev 
+  590  docker run hello-world
+  591  cd /etc/
+  592  ls
+  593  cd bash_completion.d/
+  594  ls
+  595  scripts=( docker-machine-prompt.bash docker-machine-wrapper.bash docker-machine.bash ); for i in "${scripts[@]}"; do sudo wget https://raw.githubusercontent.com/docker/machine/v0.13.0/contrib/completion/bash/${i} -P /etc/bash_completion.d; done
+  596  ls -l
+  597  ls -larth
+  598  cd 
+  599  vim .bashrc
+  600  source ./.bashrc
+  601  ls -lart .docker/machine/machines/
+  602  cd ~
+  603  ls
+  604  docker-machine ls
+  605  clear
+  606  ls
+  607  cd Documents/
+  608  ls
+  609  cd hello-world/
+  610  ls
+  611  docker ps -a
+  612  docker ps
+  613  docker version
+  614  docker run hello-world
+  615  docker --version
+  616  docker version
+  617  xinput list
+  618  python --version
+  619  which python
+  620  scripts=( docker-machine-prompt.bash docker-machine-wrapper.bash docker-machine.bash ); for i in "${scripts[@]}"; do sudo wget https://raw.githubusercontent.com/docker/machine/v0.13.0/contrib/completion/bash/${i} -P /etc/bash_completion.d; done
+  621  clear
+  622  ls
+  623  python --help
+  624  python3 --version
+  625  python version
+  626  python --version
+  627  which python
+  628  which python3
+  629  ls
+  630  cd ..
+  631  ls
+  632  ls -lart
+  633  ped
+  634  pwd
+  635  mkdir -p docker-mc/lesson2
+  636  cd docker-mc/lesson2/
+  637  ls
+  638  vim Dockerfile
+  639  ls -lart
+  640  less Dockerfile 
+  641  cat <<EOF >> requirements.txt
+  642  Flask
+  643  Redis
+  644  EOF
+  645  ls -lart ; cat requirements.txt 
+  646  vim app.py
+  647  ls
+  648  docker build -t friendlyhello .
+  649  docker images
+  650  docker ps
+  651  docker ps -a
+  652  docker run -p 4000:80 friendlyhello
+  653  clear
+  654  docker run -p 80:80 friendlyhello
+  655  docker run -d -p 80:80 friendlyhello
+  656  docker ps 
+  657  docker ps -a
+  658  docker ls
+  659  docker container ls
+  660  docker stop 1393
+  661  docker ps
+  662  docker login
+  663  docker images
+  664  docker tag friendlyhello vlvanchin/get-started:part2
+  665  docker images
+  666  docker push vlvanchin/get-started:part2 
+  667  docker images
+  668  docker history friendlyhello:latest 
+  669  docker ps -a
+  670  docker ps -a -q
+  671  docker container ls -a -q
+  672  docker container rm $(docker container ls -a -q)
+  673  docker ps -a
+  674  docker ps
+  675  systemctl status docker
+  676  clear
+  677  exit
+  678  history | grep xinput
+  679  xinput list
+  680  clear
+  681  xinput list
+  682  xinput set-prop 11 "Device Enabled" 1
+  683  xinput set-prop 11 "Device Enabled" 0
+  684  xinput set-prop 11 "Device Enabled" 1
+  685  xinput list
+  686  xinput --list-props 11
+  687  xinput --list-props 11 | grep enabled
+  688  xinput --list-props 11 | grep enable
+  689  xinput --list-props 11
+  690  clear
+  691  sudo add-apt-repository ppa:atareao/atareao
+  692  sudo apt-get update
+  693  sudo apt-get install touchpad-indicator
+  694  shutdown -r now
+  695  docker ps
+  696  docker ps -a
+  697  docker images
+  698  docker rmi vlvanchin/get-started:part2 
+  699  docker image list
+  700  docker run -d -p 80:80 vlvanchin/get-started:part2
+  701  docker images
+  702  curl http://localhost
+  703  curl http://localhost:80
+  704  docker ps
+  705  docker stop keen_darwin 
+  706  ls
+  707  cd Documents/docker-mc/lesson2/
+  708  ls
+  709  cd ..
+  710  ls
+  711  mkdir lesson3
+  712  cd lession3
+  713  ls
+  714  cd lesson3
+  715  vim docker-compose.yml
+  716  docker images
+  717  fg
+  718  docker ps
+  719  docker swarm init
+  720  docker stack deploy -c docker-compose.yml getstartedlab
+  721  docker service ls
+  722  docker service ps getstartedlab_web 
+  723  docker container ls -q
+  724  docker container ls 
+  725  docker service ls
+  726  docker service ps getstartedlab_web 
+  727  curl http://localhost
+  728  ls
+  729  cat docker-compose.yml 
+  730  vim docker-compose.yml 
+  731  docker stack deploy -c docker-compose.yml getstartedlab 
+  732  docker service ls
+  733  docker service ps
+  734  docker service ls
+  735  docker service ps getstartedlab_web 
+  736  docker container ps -q
+  737  docker stack --help
+  738  docker stack services
+  739  docker stacks services
+  740  docker stack services
+  741  docker stack services getstartedlab 
+  742  docker stack rm getstartedlab 
+  743  docker ps
+  744  docker ps -a
+  745  docker ps
+  746  l
+  747  clear
+  748  cd ..
+  749  ls
+  750  mkdir lesson4
+  751  ls lesson3
+  752  cp lesson3/docker-compose.yml lesson4
+  753  cd lesson4
+  754  ls
+  755  vim  docker-compose.yml 
+  756  clear
+  757  docker ps
+  758  docker ps -s
+  759  docker ps -a
+  760  docker images
+  761  history | grep init
+  762  history
+  763  docker swarm --help
+  764  docker swarm init
+  765  docker swarm leave
+  766  clear
+  767  docker ps -a
+  768  docker rm keen_darwin 
+  769  docker ps
+  770  docker ps -a
+  771  docker swarm init
+  772  docker-machine create --driver virtualbox myvm1
+  773  docker-machine create --driver virtualbox myvm2
+  774  docker-machine ls
+  775  docker swarm --help
+  776  docker swarm leave --helo
+  777  docker swarm leave --help
+  778  docker swarm leave default
+  779  docker swarm leave 
+  780  docker swarm leave --force
+  781  docker-machine ls
+  782  docker-machine rm -f deafult
+  783  history
+  784  docker-machine ls
+  785  docker-machine h
+  786  docker-machine ls
+  787  docker-machine kill default
+  788  docker-machine rm -f default
+  789  docker-machine ls
+  790  history | grep deafult
+  791  history | grep default
+  792  history
+  793  docker-machine ls
+  794  docker-machine stop myvm2
+  795  docker-machine ls
+  796  docker-machine start myvm2
+  797  docker-machine ls
+  798  docker-machine ssh myvm1 "docker swarm init --advertise-addr 192.168.99.101"
+  799  docker-machine ls
+  800  docker-machine ssh myvm2 "docker swarm join --token SWMTKN-1-10ep2qko2uomtn1mqv8d4l3f80jqaychlw6nda3g72v8zmk4w2-anwtnhonpo6lbfiyhe3t89d59 192.168.99.101:2377"
+  801  docker-machine ls
+  802  docker-machine ssh myvm1 "docker node ls"
+  803  docker-machine ls
+  804  docker-machine create --driver virtualbox myvm3
+  805  docker-machine ls
+  806  docker-machine ssh myvm1 "docker node ls"
+  807  docker-machine ssh myvm3 "docker swarm join --token SWMTKN-1-10ep2qko2uomtn1mqv8d4l3f80jqaychlw6nda3g72v8zmk4w2-anwtnhonpo6lbfiyhe3t89d59 192.168.99.101:2377"
+  808  docker-machine ssh myvm1 "docker node ls"
+  809  docker-machine ssh myvm2 "docker swarm leave"
+  810  docker-machine ssh myvm1 "docker node ls"
+  811  clear
+  812  docker-machine env myvm1
+  813  eval $(docker-machine env myvm1)
+  814  docker-machine ls
+  815  ls
+  816  docker stack deploy -c docker-compose.yml getstartedlab
+  817  docker stack ps getstartedlab 
+  818  history
+  819  eval $(docker-machine env -u)
+  820  eval $(docker-machine env myvm2)
+  821  eval $(docker-machine env -u)
+  822  clear
+  823  docker-machine ls 
+  824  history | grep myvm2
+  825  docker-machine ssh myvm2 "docker swarm join --token SWMTKN-1-10ep2qko2uomtn1mqv8d4l3f80jqaychlw6nda3g72v8zmk4w2-anwtnhonpo6lbfiyhe3t89d59 192.168.99.101:2377"
+  826  docker-machine ssh myvm1 "docker stack ps getstartedlab"
+  827  history | grep myvm2
+  828  docker-machine ssh myvm3 "docker swarm leave"
+  829  docker-machine ssh myvm1 "docker stack ps getstartedlab"
+  830  docker-machine ls
+  831  docker-machine ssh myvm1 "docker stack ps getstartedlab"
+  832  clear
+  833  docker-machine stop myvm3 myvm2 myvm1
+  834  docker-machine start myvm1
+  835  docker-machine start myvm2 myvm3
+  836  docker-machine start myvm3
+  837  ls
+  838  history
+  839  docke-machine ssh myvm1 "docker stack ps getstartedlab"
+  840  docker-machine ssh myvm1 "docker stack ps getstartedlab"
+  841  history | grep "leave"
+  842  docker-machine ls
+  843  docker-machine ssh myvm1 "docker node ls"
+  844  docker node --help
+  845  docker node rm jeaz41jdmyogxom7fraxelzzd
+  846  docker-machine ssh myvm1 "docker node rm jeaz41jdmyogxom7fraxelzzd"
+  847  docker-machine ssh myvm1 "docker node ls"
+  848  history
+  849  docker-machine ssh myvm3 "docker swarm join --token SWMTKN-1-10ep2qko2uomtn1mqv8d4l3f80jqaychlw6nda3g72v8zmk4w2-anwtnhonpo6lbfiyhe3t89d59 192.168.99.101:2377"
+  850  docker-machine ssh myvm1 "docker node ls"
+  851  docker-machine ssh myvm1 "docker node rm udac9mszr24rqphqd6rnndd5m"
+  852  docker-machine ssh myvm1 "docker stack ps getstartedlab"
+  853  docker-machine ssh myvm1 "docker node ls"
+  854  clear
+  855  docker-machine ls
+  856  docker stack ps getstartedlab
+  857  docker-machine stop myvm3
+  858  docker-machine stop myvm2
+  859  docker-machine stop myvm1
+  860  docker ps -a
+  861  exit
+  862  sudo apt update
+  863  sudo apt upgrade -y
+  864  clea
+  865  clear
+  866  node --version
+  867  exit
+  868  history | grep xinput
+  869  xinput list
+  870  xinput --list-props 11
+  871  history | grep xinput
+  872  `xinput set-prop 11 "Device Enabled" 1
+  873  xinput set-prop 11 "Device Enabled" 1
+  874  clear
+  875  shutdown -h
+  876  node --version
+  877  nodejs -v
+  878  npm -v
+  879  npm --version
+  880  cd 
+  881  ls
+  882  clear
+  883  sudo apt update
+  884  sudo apt install software-properties-common apt-transport-https wget
+  885  wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
+  886  sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
+  887  sudo apt update ; sudo apt install code
+  888  ls
+  889  cd Documents/
+  890  ls
+  891  ls -d
+  892  ls -d */
+  893  cd ..
+  894  ls
+  895  cd Documents/
+  896  ls
+  897  clear
+  898  mkdir git
+  899  cd git
+  900  ls
+  901  cd 
+  902  ls
+  903  ls -lart .ssh
+  904  cat .ssh/id_rsa.pub 
+  905  npm version
+  906  sudo apt update
+  907  curl -sL https://deb.nodesource.com/setup_13.x | sudo -E bash -
+  908  sudo apt-get install -y nodejs
+  909  sudo apt-get install -y build-essential
+  910  clear
+  911  node --version
+  912  npm --version
+  913  clear
+  914  npx --version
+  915  clear
+  916  cd Documents/gt
+  917  cd Documents/git/
+  918  ls
+  919  npx create-react-app my-react-app
+  920  ls
+  921  cd my-react-app/
+  922  ls
+  923  npm start
+  924  ls
+  925  ls -lart
+  926  npm start
+  927  clear
+  928  cd ..
+  929  clear
+  930  ls
+  931  mv my-react-app/ my-dummy-react-app
+  932  clear
+  933  ls
+  934  create-react-app react-complete-guide --scripts-version 1.1.5
+  935  history
+  936  npx create-react-app my-react-app --scripts-version 1.1.5
+  937  ls
+  938  cd my-react-app/
+  939  npm start
+  940  history
+  941  cd ..
+  942  ls
+  943  rm -rf my*
+  944  clear
+  945  ls
+  946  history
+  947  npx create-react-app my-react-app --scripts-version 1.1.5
+  948  ls
+  949  cd my-react-app/
+  950  npm start
+  951  exit
+  952  npm start
+  953  ls
+  954  cd Documents/
+  955  ls
+  956  cd git
+  957  ls
+  958  git config --local --list
+  959  git config local --list
+  960  git config --global list
+  961  git config --global
+  962  git config --global --list
+  963  git config --local --list
+  964  git config --system --list
+  965  cat ~/.ssh/id_rsa.pub 
+  966  ls
+  967  clear
+  968  git clone git@github.com:vlvanchin/private.git
+  969  ls
+  970  cd private/
+  971  ls
+  972  mkdir learn_react
+  973  cd learn_react/
+  974  ls
+  975  mv ../../my-react-app/ .
+  976  ls
+  977  cd ..
+  978  ls
+  979  git status
+  980  ls
+  981  git status
+  982  ls
+  983  cd learn_react/
+  984  ls
+  985  cd my-react-app/
+  986  ls
+  987  ls -a
+  988  vim .gitignore 
+  989  ls
+  990  cd ..
+  991  ls
+  992  cd ..
+  993  ls
+  994  git status
+  995  git add learn_react/
+  996  git status
+  997  clear
+  998  git status
+  999  git commit -s -m "added reactjs"
+ 1000  git config --global user.email "vlvanchin@gmail.com"
+ 1001  git config --global user.name "vlvanchin"
+ 1002  git commit -s -m "added reactjs"
+ 1003  git status
+ 1004  git status --color
+ 1005  clear
+ 1006  ls
+ 1007  git status
+ 1008  git push origin master
+ 1009  npm start
+ 1010  pwd
+ 1011  git status
+ 1012  git add src/App.js 
+ 1013  git commit -s -m "code updated"
+ 1014  git branch
+ 1015  git push origin master 
+ 1016  ifconfig
+ 1017  exit
+ 1018  node --version
+ 1019  npm --version
+ 1020  python --version
+ 1021  python3 --version
+ 1022  pip --version
+ 1023  pip3 --version
+ 1024  docker ps
+ 1025  docker ps -a
+ 1026  ls
+ 1027  cd Documents/
+ 1028  sl
+ 1029  ls
+ 1030  cd docker-mc/
+ 1031  ls
+ 1032  cd lesson4
+ 1033  ls
+ 1034  cat docker-compose.yml 
+ 1035  docker network list
+ 1036  docker-machine list
+ 1037  docker-machine --help
+ 1038  history
+ 1039  history | grep docker-machine
+ 1040  docker-machine ls
+ 1041  docker images list
+ 1042  clear
+ 1043  sudo apt update
+ 1044  apt list --upgradable
+ 1045  sudo apt upgrade -y
+ 1046  sudo apt install byobu
+ 1047  less /etc/kernel/
+ 1048  less /etc/
+ 1049  ls
+ 1050  cd /etc/
+ 1051  ls
+ 1052  ls ke*
+ 1053  cd kernel
+ 1054  ls
+ 1055  cd install.d/
+ 1056  ls
+ 1057  cd ..
+ 1058  cd 
+ 1059  byobu
+ 1060  exit
+ 1061  cd ..
+ 1062  ls
+ 1063  cd ..
+ 1064  ls
+ 1065  cd git
+ 1066  ls
+ 1067  cd private/
+ 1068  ls
+ 1069  git status
+ 1070  git pull 
+ 1071  ls -lart --color
+ 1072  cd learn_docker/
+ 1073  ls
+ 1074  ls -lart
+ 1075  less README.md 
+ 1076  cd myDataDir/
+ 1077  ls
+ 1078  cat host.txt 
+ 1079  cat message.txt container.txt 
+ 1080  cat message.txt, container.txt 
+ 1081  cat message.txt ; container.txt 
+ 1082  CLEAR
+ 1083  clear
+ 1084  ls
+ 1085  cat config.local 
+ 1086  cat container.txt 
+ 1087  cat host.txt 
+ 1088  cat message.txt 
+ 1089  ls
+ 1090  ls -lart
+ 1091  cat appl.bin 
+ 1092  cd ..
+ 1093  ls
+ 1094  cd customMessage/
+ 1095  ls
+ 1096  cat Dockerfile 
+ 1097  cd ..
+ 1098  less dockerCmds.txt 
+ 1099  lc
+ 1100  ls -
+ 1101  ls
+ 1102  cd echoServer/
+ 1103  ls
+ 1104  cd ../entry/
+ 1105  s
+ 1106  ls -l
+ 1107  cd ../javaInstall/
+ 1108  ls
+ 1109  cd ../kubernetes-learning/
+ 1110  ls
+ 1111  cat help.md 
+ 1112  cd ..
+ 1113  ls
+ 1114  cd lesson
+ 1115  cd lesson2
+ 1116  ls
+ 1117  cat app.py 
+ 1118  cat Dockerfile 
+ 1119  cat requirements.txt 
+ 1120  ls
+ 1121  cd ..
+ 1122  ls
+ 1123  cat lesson3
+ 1124  ls -lart lesson3
+ 1125  cat  lesson3/docker-compose.yml 
+ 1126  exit
+ 1127  ls
+ 1128  docker ps
+ 1129  docker ps -a
+ 1130  docker images
+ 1131  docker --version
+ 1132  sudo apt update 
+ 1133  sudo apt upgrade -y
+ 1134  docker run hello-world
+ 1135  docker ps -a
+ 1136  docker container ls --all
+ 1137  docker ps -a
+ 1138  cd Documents/git/
+ 1139  ls
+ 1140  cd ..
+ 1141  ls
+ 1142  cd docker-mc/
+ 1143  ls
+ 1144  cd lesson
+ 1145  cd lesson2
+ 1146  ls
+ 1147  docker images
+ 1148  clear
+ 1149  ls
+ 1150  cat Dockerfile 
+ 1151  cat requirements.txt 
+ 1152  cd ..
+ 1153  ls
+ 1154  cat lesson4/docker-compose.yml 
+ 1155  cat lesson3/docker-compose.yml
+ 1156  clear
+ 1157  ls
+ 1158  docker ps
+ 1159  docker-machine -h
+ 1160  docker-machine ls
+ 1161  docker-machine active
+ 1162  docker-machine config
+ 1163  history
+ 1164  pwd
+ 1165  cd Documents/git/private/
+ 1166  ls
+ 1167  cat howtoAnsible.md 
+ 1168  ls
+ 1169  cat howtoAws.md 
+ 1170  ls
+ 1171  cd Documents/git/private/
+ 1172  clear
+ 1173  ls
+ 1174  cat howtoJenkins.md 
+ 1175  ls
+ 1176  cat personalTodo.md 
+ 1177  rm personalTodo.md 
+ 1178  cat todo.md 
+ 1179  clear
+ 1180  ls
+ 1181  rm todo.md 
+ 1182  clear
+ 1183  ls
+ 1184  cat README.md 
+ 1185  ls -lart scripts/
+ 1186  ls -lart scripts/jenkins/
+ 1187  ls -lart scripts/jenkins/eclipse/
+ 1188  ls
+ 1189  ls -lart learn_docker/
+ 1190  cat learn_docker/dockerCmds.txt 
+ 1191  ls
+ 1192  history >> learn_docker/dockerCmds_2.txt 

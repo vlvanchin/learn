@@ -1,0 +1,380 @@
+    5  yum list docker-ce --showduplicates | sort -r
+    6  sudo systemctl start docker
+    7  docker version
+    8  ps aux | grep docker
+    9  sudo systemctl status docker
+   11  sudo groupadd docker
+   12  sudo useradd -aG docker $USER
+   13  sudo usermod -aG docker $USER
+   15  sudo systemctl restart docker
+   16  docker version
+   17  sudo systemctl enable docker
+   18  sudo systemctl start docker
+   19  docker version
+   20  docker images
+   21  docker run hello-world
+   22  docker images
+   23  docker pull ubuntu:latest
+   24  docker images
+   25  docker run -it ubuntu:latest /bin/bash
+   27  docker search centos6
+   28  docker search centos:6
+   29  docker pull centos:6
+   30  docker images
+   31  docker run -it centos:6 /bin/bash
+   33  docker ps
+   34  docker ps -a
+   35  docker commit -h
+   36  docker commit -m "centos6 with apache" elated_wu newcentos:withapache
+   37  docker images
+   38  docker run -d -it centos:6 /bin/bash
+   39  docker ps
+   40  docker attach kind_buck
+   41  docker ps
+   42  docker run -d -it centos:6 /bin/bash
+   43  docker ps
+   44  docker inspect agitated_morse |grep IP
+   47  docker attach agitated_morse
+   48  docker ps -a
+   49  docker rm agitated_morse
+   50  docker rm kind_buck elated_wu
+   51  docker rm cocky_lovelace determined_galois
+   52  docker ps -a
+   53  docker images
+   54  docker run -it --name="test_ssh" -p 8022:22 centos:6 /bin/bash
+   55  docker ps
+   56  docker run -it --name="test_ssh" -p 8022:22 centos:6 /bin/bash
+   57  docker ps -a
+   58  docker rm test_ssh
+   59  docker run -it --name="test_ssh" -p 8022:22 centos:6 /bin/bash
+   60  docker ps
+   61  docker ps -a
+   62  docker start test_ssh
+   63  docker ps
+   64  docker inspect test_ssh | grep IP
+   66  docker ps
+   67  docker exec -it test_ssh /bin/bash
+   69  docker ps
+   79  docker attach test_ssh
+  311  docker images
+  320  docker ps
+  321  docker ps -a
+  322  docker start sleepy_austin
+  323  docker logs sleep_austin
+  346  docker ps
+  347  docker down sleepy_austin
+  348  docker stop sleepy_austin
+  357  docker ps
+  358  docker stop frosty_hodgkin
+  362  docker ps
+  363  docker logs sharp_lumiere
+  364  docker ps
+  365  docker stop sharp_lumiere
+  366  docker start sharp_lumiere
+  367  docker logs sharp_lumiere
+  368  docker logs sharp_lumiere --follow
+  373  docker ps 
+  374  docker ps -q
+  376  docker ps -q | wc -l
+  377  docker ps -q | sed -f $1
+  379  docker ps -q | awk { print $1 }
+  380  docker ps -q
+  383  echo "`docker ps -q`"
+  384  `docker ps -q`
+  385  docker restart `docker ps -q`
+  416  docker ps
+  419  docker attach sharp_lumiere /bin/bash
+  420  docker attach sharp_lumiere 
+  421  docker ps
+  422  docker ps -a
+  425  docker exec -it 37c9 /bin/bash
+  430  sudo usermod -aG docker jenkins
+  434  docker ps 
+  435  docker stop vibrant_goldwasser
+  438  systemctl start jenkins-docker
+  439  systemctl status jenkins-docker
+  440  docker ps 
+  442  docker logs jenkins-server
+  447  systemctl status jenkins-docker
+  448  systemctl restart jenkins-docker
+  449  docker ps
+  453  docker ps
+  454  docker ps -a
+  456  docker images jenkins/j*
+  461  systemctl status jenkins-docker
+  462  systemctl start jenkins-docker
+  463  systemctl status jenkins-docker
+  473  docker logs jenkins-server
+  474  docker ps
+  475  docker exec -it jenkins-server /bin/bash
+  478  docker ps
+  479  docker images
+  487  docker ps -a
+  488  docker start jenkins-server
+  490  docker ps
+  491  docker exec -it 0565 /bin/bash
+  503  docker inspect jenkins-server | grep volumes
+  504  docker inspect jenkins-server | grep volume
+  505  docker inspect jenkins-server | grep VOLUME
+  506  docker inspect jenkins-server 
+  569  docker images
+  582  docker ps
+  583  docker images
+  584  docker run -it centos7/java8:v2 /bin/bash
+  585  docker ps
+  586  docker ps -a
+  593  docker ps
+  597  docker images
+  601  docker build -t mycustoming/withservices:v1 .
+  602  docker login
+  603  docker build -t mycustoming/withservices:v1 .
+  604  sudo docker login
+  605  docker search centos7:latest
+  606  docker search centos/centos7:latest
+  607  docker images
+  608  docker rmi hello-world
+  609  docker images
+  610  docker pull hello-world
+  612  docker build -t mycustoming/withservices:v1 .
+  616  docker build -t mycustoming/withservices:v1 .
+  617  docker images
+  619  docker build -t mycustoming/withservices:v1 .
+  620  docker images
+  621  docker ps
+  622  docker run -it ubuntu:latest /bin/bash
+  623  docker ps
+  624  docker ps -a
+  625  docker start competent_cori
+  626  docker stop competent_cori
+  627  docker rm competent_cori
+  628  docker ps -a
+  630  man docker-container-create
+  631  docker create --name "my_container" -it ubuntu:latest /bin/bash 
+  632  docker ps
+  633  docker ps -a
+  634  docker start my_container
+  635  docker exec -it my_container /bin/bash
+  636  docker ps
+  637  docker attach my_container
+  638  docker ps
+  643  mkdir docker
+  644  cd docker
+  652  docker create -it  --name "local_vol" -v /containerdata centos:centos7 /bin/bash
+  653  docker ls
+  654  docker ps 
+  655  docker start local_vol
+  656  docker ps
+  657  docker attach local_vol
+  658  docker create -it  --name "remote_vol" -v /home/user/docker/mydata:/containerdata centos:centos7 /bin/bash
+  659  docker ps
+  660  docker start remote_vol
+  661  docker attach remote -v
+  662  docker attach remote_vol
+  663  docker ps
+  667  docker stats
+  668  docker top
+  669  docker top my_container
+  670  docker stats
+  675  docker images
+  676  docker ps -a
+  677  docker ps -a -q | 
+  678  docker ps -a -q 
+  679  docker ps -a -q  | wc -l
+  680  docker rm `docker ps -a -q `
+  681  docker ps -a
+  685  docker images
+  686  docker pull nginx:latest
+  687  docker run -itd nginx:latest
+  688  docker ps
+  690  docker inspect peaceful_grothendieck
+  693  docker stop peaceful_grothendieck
+  694  docker ps
+  695  docker run -itd -p 80  nginx:latest
+  696  docker ps
+  699  docker ps
+  700  docker stop frosty_cohen
+  701  docker run -itd -p 8080:80  nginx:latest
+  702  docker ps
+  705  docker ps
+  706  docker run -itd -P nginx:latest
+  707  docker ps
+  708  docker stop romantic_snyder dazzling_noether
+  710  docker ps
+  711  docker ps -a
+  712  docker rename dazzling_noether newname 
+  713  docker ps
+  714  docker ps -a
+  716  docker ps -a
+  717  docker start newname romantic_snyder
+  718  docker ps
+  719  docker events
+  720  docker events --since '1h'
+  722  docker exec -it newname /bin/bash
+  723  docker ps
+  724  docker attach newname
+  725  docker ps
+  726  docker start newname
+  727  docker kill newname
+  729  docker events
+  732  cd docker
+  747  docker images
+  754  docker ps
+  755  docker exec -it sharp_wright /bin/bash
+  756  docker logs sharp_wright
+  758  docker ps
+  759  docker exec -it sharp_wright /bin/bash
+  762  docker ps -a
+  763  docker stop sharp_wright
+  765  docker ps 
+  767  docker logs elated_northcutt
+  769  docker ps
+  777  locate docker
+  778  whereis docker
+  779  cd /etc/docker/
+  795  cat /var/lib/docker/volumes/jenkins_home/_data/config.xml | grep useSecurity
+  796  sudo cat /var/lib/docker/volumes/jenkins_home/_data/config.xml | grep useSecurity
+  797  cat /var/lib/docker/volumes/128b750c1b1679c48e182fdfa4e218ede65fbe8c06fc06ba07dad631b6c00398/_data/config.xml| grep useSecurity
+  798  sudo cat /var/lib/docker/volumes/128b750c1b1679c48e182fdfa4e218ede65fbe8c06fc06ba07dad631b6c00398/_data/config.xml| grep useSecurity
+  802  docker ps
+  803  docker exec -it stoic_clarke /bin/bash
+  804  docker inspect stoic_clarke | grep volume
+  807  cd /var/lib/docker/volumes/jenkins_home/_data
+  808  sudo cd /var/lib/docker/volumes/jenkins_home/_data
+  818  docker ps
+  819  docker kill stoic_clarke
+  820  docker ps
+  821  docker ps -a
+  822  docker images
+  825  docker ps
+  826  docker logs vibrant_neumann
+  828  docker logs vibrant_neumann
+  830  docker logs vibrant_neumann
+  855  docker ps 
+  856  docker stop vibrant_neumann
+  858  docker ps 
+  859  docker stop admiring_fermat
+  864  docker ps
+  866  docker ps
+  871  docker ps
+  872  docker stop elated_blackburn
+  873  docker ps
+  875  docker ps
+  882  docker ps
+  886  docker ps
+  897  docker ps
+  898  docker stop determined_ptolemy
+  902  docker ps
+  904  docker s
+  905  docker ps
+  906  docker stop determined_pasteur
+  907  docker ps -a
+  912  docker ps
+  913  docker exec -it pensive_williams /bin/bash
+  925  docker ps
+  926  docker ps 
+  927  docker ps | sed -i "jenkins"
+  929  docker ps
+  930  docker ps 
+  931  docker ps -a
+  932  docker start pensive_williams
+  934  docker ps
+  935  docker images
+  936  docker login
+  939  man docker-image-create
+  940  man docker-image
+  941  docker image --help
+  942  docker container --help
+  943  man docker-container-commit
+  944  docker ps
+  945  docker commit pensive_williams -m "blueocean jenkins" vlvanchin/jenkins:latest
+  946  docker commit pensive_williams  vlvanchin/jenkins:latest
+  947  docker images
+  948  docker push vlvanchin/jenkins:latest
+  949  docker images
+  955  docker images
+  957  docker images
+  958  docker ps -a
+  959  docker rm `docker ps -a -q`
+  960  docker ps
+  961  docker ps -a
+  963  docker images
+  964  docker run -it centos:latest /bin/bash
+  965  docker ps
+  966  docker run -it centos:latest /bin/bash
+  967  docker ps
+  968  docker run -it centos:latest 
+  969  docker ps
+  970  docker start pensive_williams
+  971  docker ps 
+  972  docker run -itd centos:latest 
+  973  docker ps
+  974  docker commit f103 centos:mine
+  975  docker images
+  977  docker save --output centos.latest.tar centos:latest
+  982  docker rmi centos:latest
+  983  docker ps
+  984  docker images
+  989  docker load --input centos.latest.tar.gz 
+  990  docker images
+  991  docker ps
+  992  docker ிள
+  994  docker ps
+  995  docker stop hopeful_mayer
+  996  docker ps
+  997  docker save --help
+  999  docker save --help
+ 1000  docker save --output my-blueocean-jenkins.tar vlvanchin/jenkins:latest
+ 1011  docker images
+ 1012  docker rmi `docker images --filter dangling=true`
+ 1013  docker images --filter dangling=true
+ 1014  docker images
+ 1015  docker ps
+ 1016  docker stop pensive_williams
+ 1017  docker ps
+ 1018  docker ps -a
+ 1019  docker rm `docker ps -a -q`
+ 1020  docker ps
+ 1021  docker ps -a
+ 1022  docker images
+ 1023  docker rmi `docker images -q`
+ 1024  docker ps
+ 1025  docker ps -a
+ 1026  docker images
+ 1027  docker rmi 1e1148e4cc2c -f
+ 1028  docker images
+ 1031  docker images
+ 1032  docker ps -a
+ 1034  docker pull centos:eentos7
+ 1035  docker pull centos/eentos7
+ 1036  docker login 
+ 1037  docker pull centos/eentos7
+ 1038  docker pull centos/centos7
+ 1039  docker pull centos/centos7:latest
+ 1040  docker pull vlvanchin/ubuntu-nodejs:latest
+ 1041  docker pull centos:centos7
+ 1042  docker pull ubuntu:xenial
+ 1043  docker pull ubuntu:latest
+ 1044  docker pull ubuntu:18.04
+ 1045  docker images
+ 1046  docker rmi vlvanchin/ubuntu-nodejs:latest
+ 1047  docker rm `docker ps -a -q`
+ 1048  docker ps -a -1
+ 1049  docker ps -a -q
+ 1050  docker images
+ 1051  docker rmi ubuntu:xenial
+ 1052  docker images 
+ 1053  docker run -it --dns=8.8.8.8 --name "mycontainer1" ubuntu:latest /bin/bash
+ 1054  docker run -it --dns=8.8.8.8 --name "mycontainer2" --dns-search="mydomain.local" ubuntu:latest /bin/bash
+ 1055  docker run -it --dns=8.8.8.8 --dns-search="mydomail.local" -v ~/remote_vol:/local_vol --name="container3" ubuntu:latest /bin/bash
+ 1057  docker ps -a
+ 1058  docker inspect mycontainer2
+ 1059  docker rm container2
+ 1060  docker ps
+ 1061  docker ps -a
+ 1062  docker rm mycontainer2
+ 1063  docker ps -a
+ 1064  docker rm mycontainer1 mycontainer3
+ 1065  docker rm container3
+ 1067  docker ps -a
+ 1068  history | grep docker
+ 1070  history | grep docker > dockerCmds.txt

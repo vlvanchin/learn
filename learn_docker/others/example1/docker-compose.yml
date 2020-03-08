@@ -1,0 +1,20 @@
+version: '3'
+services:
+  backend:
+    container_name: redis
+    hostname: redis
+    image: redis
+    restart: always
+
+  frontend:
+    image: rediscommander/redis-commander:latest
+    container_name: redis-commander
+    hostname: redis-commander
+    links:
+      - backend:redis
+    ports:
+      - 8081:8081
+    environment:
+      - REDIS_HOSTS=local:redis:6379
+    restart: always
+

@@ -1,0 +1,11 @@
+/* AUTOMATICALLY GENERATED ON Sat Nov 14 21:47:12 SGT 2015*/
+/* DO NOT EDIT */
+
+grant codeBase "http://docs.oracle.com/javase/tutorial/security/tour1/examples/" {
+};
+
+grant codeBase "file:/home/demo/git/testbed/test/" {
+  permission java.util.PropertyPermission "user.home", "read";
+  permission java.util.PropertyPermission "java.home", "read";
+};
+

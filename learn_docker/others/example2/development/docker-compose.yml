@@ -1,0 +1,9 @@
+version: '3'
+services:
+  web:
+    build:
+      context: ./content
+      dockerfile: Dockerfile
+    extends:
+      file: ../common/docker-compose.yml
+      service: webapp

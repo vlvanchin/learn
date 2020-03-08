@@ -1,0 +1,14 @@
+version: '2'
+services:
+  webapp:
+#    extends:
+#      file: common.yml
+#      service: app
+#    build: 
+#      context: ./common
+#      dockerfile: Dockerfile
+    build: ./common
+    image: nginx
+    ports:
+      - 8080:8080
+

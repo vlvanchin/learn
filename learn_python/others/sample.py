@@ -1,0 +1,5 @@
+print("hello")
+print ("hello")
+print ('hello' + "world")
+print ('hello',"world")
+print ("tabed statement")

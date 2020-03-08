@@ -1,0 +1,8 @@
+version: '2'
+services:
+  app:
+    build: .
+    envrionment:
+      CONFIG_FILE_PATH: /code/config
+      API_KEY: xxxyyy
+    

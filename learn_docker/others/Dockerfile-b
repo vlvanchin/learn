@@ -1,0 +1,4 @@
+FROM ubuntu
+RUN  touch /setup.txt
+RUN echo init > /setup.txt
+copy file.txt /b.txt

@@ -1,0 +1,21 @@
+#!/usr/bin/python3
+#
+""" 
+mydocopter.
+ 
+Usage: ex002 [options] <filename>
+
+Options:
+  -v  --verbose Log messages
+  -o OUTPUT --output=OUTPUT Output file
+  -a <a>      Initial coefficient for second order term [default: 1.]
+
+Example:
+  $ echo -a "blah blah blah..." 
+"""
+
+
+import docopt
+args = docopt.docopt(__doc__, version=1.2)
+print (args)
+

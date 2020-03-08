@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en" data-ng-app="demoApp">
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-rc.0/angular.min.js"></script>
+  <title></title>
+</head>
+<body>
+  <script type="text/javascript">
+    var demoApp = angular.module("demoApp",[]);
+
+    function SimpleController ($scope) {
+      $scope.customers = [
+        {name:'Dave', city:'New York' },
+        {name:'Napur', city:'York' },
+        {name:'heedy', city:'New' },
+        {name:'Shriva', city:'New Jerssie' }
+      ];
+    }
+
+    demoApp.controller('SimpleController', SimpleController);
+  </script>
+
+
+    <div class="container" data-ng-controller="SimpleController">
+      Name: <br />
+      <input type="text" data-ng-model="name" />
+      <br />
+      <ul>
+        <li data-ng-repeat="customer in customers | filter:name"> {{ customer.name | uppercase }} -
+        {{ customer.city }}</li>
+      </ul>
+    </div>
+
+
+
+</body>
+</html>

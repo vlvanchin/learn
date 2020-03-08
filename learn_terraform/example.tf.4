@@ -1,0 +1,29 @@
+provider "aws" {
+  access_key = ""
+  secret_key = ""
+  region     = "ap-southeast-1"
+}
+
+resource "aws_instance" "example" {
+  ami        = "ami-0340a7ebf82eda150"
+  instance_type = "t1.micro"
+
+  provisioner "local-exec" {
+    command = "echo ${aws_instance.example.public_ip}  > ip_address.txt"
+  }
+}
+
+# New resource for the S3 bucket our application will use.
+resource "aws_s3_bucket" "example" {
+  # NOTE: S3 bucket names must be unique across _all_ AWS accounts, so
+  # this name must be changed before applying this example to avoid naming
+  # conflicts.
+  bucket = "vanchin-my-bucket-3"
+  acl    = "private"
+}
+
+resource "aws_eip" "ip" {
+  instance = "${aws_instance.example.id}"
+}
+
+

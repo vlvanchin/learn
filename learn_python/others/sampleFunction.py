@@ -7,7 +7,7 @@ fun(location="L.A",year=2004,name="susi")
 
 fun("bagsub", year=2000, location="singapore")
 
-tuple1 = ("Robert Bosch", "bishan",2007)
+tuple1 = ("sample company", "bishan",2007)
 fun(*tuple1)
 
 

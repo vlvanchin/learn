@@ -125,4 +125,136 @@ use the following command to remove all the stopped containers
 $ docker rm $(docker ps -a -q)
 ```
 
+## Lesson 3
+
+### create a separate folder lessson3 and `cd` to it
+
+### compose a docker that could spin up 3 containers of the pushed images in lesson2
+
+write a `docker-compose.yml` with the following
+
+```
+$ cat docker-compose.yml
+version: "3"
+services:
+  web:
+    # replace the username/repo:tag
+    image: vlvanchin/get_started:part2
+    deploy:
+      replicas: 3
+      resources:
+        limits:
+          cpus: "0.1"
+          memory: 50M
+      restart_policy:
+        condition: on-failure
+    ports:
+      - "80:80"
+    networks:
+      - webnet
+networks:
+  webnet:
+```
+
+the above code configures the image to be used for spinning the containers, defines the number of replicas as 3, resources like cpu and memory, the restart-policy to automatically restart on failures, defines the host:container ports to 80:80 and the network as webnet
+
+### Initialize to Swarm mode
+
+```
+$ docker swarm init
+```
+
+This will initalize the current node as the manager node, and will display the command to create worker nodes to join this manager
+
+### deploy the stack of containers as an application (give a name)
+
+```
+$ docker stack deploy -c docker-compose.yml getstartedlab
+```
+
+here sub-command `stack` refers to the containers, `deploy` is the action of the sub-command. `-c` is the configuration that is taken from docker-compose.yml, *getstartedlab* is the name of the application.
+
+when run, this will create the following
+
+* creates network *getstartedlab_webnet*
+* creates service *getstartedlab_web*
+
+### how to view the list of services
+
+```
+$ docker stack ls
+```
+
+This will show the services and orchestrator and the name of the service
+
+NAME                SERVICES            ORCHESTRATOR
+getstartedlab       1                   Swarm
+
+
+### how to view the details of the stack service
+
+this is shown in 2 methos
+
+```
+$ docker service ls
+
+or
+
+$ docker stack services getstartedlab
+```
+
+This will list down the services (application) with columns like ID, NAME, MODE, REPLICAS, IMAGE AND PORTS
+
+ID                  NAME                MODE                REPLICAS            IMAGE                         PORTS
+otex9eq07w61        getstartedlab_web   replicated          3/3                 vlvanchin/get_started:part2   \*:80->80/tcp
+
+access the application in brower using *http://localhost* and keep hitting `refresh` button and you will notice that response is from different replicas
+
+### how to view the list of container in the application
+
+```
+$ docker service ps getstartedlab_web
+```
+
+This ps is the process status, list of all containers in application (getstartedlab_web) stack.
+
+ID                  NAME                  IMAGE                         NODE                 DESIRED STATE       CURRENT STATE           ERROR               PORTS
+hx66smz60fny        getstartedlab_web.1   vlvanchin/get_started:part2   van-Aspire-E5-491G   Running             Running 8 minutes ago
+gm0wtrr8wyfe        getstartedlab_web.2   vlvanchin/get_started:part2   van-Aspire-E5-491G   Running             Running 8 minutes ago
+vbqhrksd6m02        getstartedlab_web.3   vlvanchin/get_started:part2   van-Aspire-E5-491G   Running             Running 8 minutes ago
+
+
+### update and reconfigure the stack
+
+if you change the number of replicas to 5 in the docker-compose.yml file, then run the following command to redeploy
+
+```
+$ docker stack deploy -c docker-compose.yml getstartedlab
+```
+
+### how to remove the stack service
+
+```
+$ docker stack rm getstartedlab
+```
+
+The above command will remove the stack service by 
+
+* removes service *getstartedlab_web*
+* removes network *getstartedlab_webnet*
+
+
+### how to leave the swarm 
+
+leaving swarm as an admin
+
+```
+$ docker swarm leave --force
+```
+
+leaving swarm as a worker node
+
+```
+$ docker swarm leave
+```
 

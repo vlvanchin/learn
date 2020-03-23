@@ -1,4 +1,4 @@
-#!/usr/bin/zsh 
+#!/bin/bash
 
 # Create directory
 TODAY=`date '+%Y%m%d'`

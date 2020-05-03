@@ -1,0 +1,7 @@
+-
+  name: "Execute a script on all web server nodes"
+  hosts: all
+  tasks:
+    -
+      name: "Execute a script on all web server nodes"
+      script: "/tmp/long_list_script.sh"

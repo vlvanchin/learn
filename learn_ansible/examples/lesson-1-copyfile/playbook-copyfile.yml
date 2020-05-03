@@ -1,0 +1,8 @@
+-
+  name: to copy the test.txt file to all targets
+  hosts: all
+  tasks:
+    - name: copy file
+      copy:
+        src: /tmp/test.txt
+        dest: /tmp/test.txt

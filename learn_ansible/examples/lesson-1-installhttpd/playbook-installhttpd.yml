@@ -1,0 +1,14 @@
+-
+    name: 'Execute a script on all web server nodes'
+    hosts: all
+    tasks:
+        -
+            name: 'Copy the file to tmp'
+            copy:
+                  src: "./install_script.sh"
+                  dest: './install_script.sh'
+                  mode: '0755'
+        -
+            name: 'Execute a script on all web server nodes'
+            shell: ". ./install_script.sh"
+            become: true

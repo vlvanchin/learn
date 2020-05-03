@@ -1,0 +1,10 @@
+-
+    name: 'Execute a script on all web server nodes'
+    hosts: all
+    become: true
+    tasks:
+        -
+            name: Start service httpd, if not started
+            service:
+                name: httpd
+                state: started

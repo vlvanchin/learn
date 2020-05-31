@@ -1,7 +1,7 @@
 -
   name: to test the connectivity of the servers
   hosts:
-    -  target2
+    -  target*
   tasks:
     -  name: ping test
        ping:

@@ -1,0 +1,12 @@
+-
+  name: Deploy a mysql db application
+  hosts: db_server
+  roles:
+    - python
+    - mysql_db
+-
+  name: Deploy a flask web application
+  hosts: web_server
+  roles:
+    - python
+    - flask_web

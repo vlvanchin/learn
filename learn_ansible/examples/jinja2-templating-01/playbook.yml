@@ -1,0 +1,59 @@
+-
+  name: Testing Jinja2 templates
+  hosts: localhost
+  vars:
+    first_name: james
+    last_name: bond
+    array_of_numbers:
+      - 12
+      - 34
+      - 06
+      - 34
+    web_dependencies:
+      - python
+      - python-setuptools
+      - python-dev
+      - build-essential
+      - python-pip
+      - python-mysqldb
+    sql_dependencies:
+      - python
+      - python-mysqldb
+    ip_address: 192.168.1.6
+    file_path: /etc/hosts
+  tasks:
+    - name: debug tasks
+      debug:
+        msg: "hello there from debug"
+    - name: debug task with variables
+      debug:
+        msg: 'The name is {{ last_name }}!{{ first_name }} {{ last_name }}!'
+
+    - debug:
+      # template using title filter for each variable substitution
+      msg: 'The name is {{ last_name|title }}!{{ first_name|title }} {{ last_name|title }}!'
+
+    - debug:
+      # to get the min value within in list of numbers
+      msg: 'Lowest= {{ array_of_numbers | min }}'
+
+    - # identify the unique packages from the two set of lists and install them
+      name: Install dependencies
+      apt: name='{{ item }}' state=installed
+      with_items: '{{ web_dependencies | union(sql_dependencies) }}'
+
+    - name: Install dependencies
+      # to create a file that suffices with a 4 digit number (0000-9999)
+      file:
+        path: /tmp/random_file_{{ 1000 | random }}
+        state: touch
+
+    - name: Test IP Address
+      debug:
+        # this is to check if the ip_address is correct
+        msg: IP Address = {{ ip_address | ipaddr}}
+
+    - name: Get filename
+      debug:
+        # to display the filename of the variable file_path
+        msg: File Name = {{file_path | basename }}

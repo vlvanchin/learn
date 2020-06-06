@@ -1,0 +1,6 @@
+-
+  name: Debug something
+  hosts:
+    -  localhost
+  tasks:
+    -  debug: msg="This is test message"

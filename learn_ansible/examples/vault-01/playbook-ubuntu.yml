@@ -1,0 +1,7 @@
+-
+  name: Deploy a web application
+  hosts:
+    -  target*
+  tasks:
+    -  name: ping test
+       ping:

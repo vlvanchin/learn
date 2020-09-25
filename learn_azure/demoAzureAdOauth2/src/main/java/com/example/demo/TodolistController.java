@@ -52,7 +52,7 @@ public class TodolistController {
      * @param item
      * @return
      */
-    @PreAuthorize("hasRole('ROLE_Users')")
+    ///@PreAuthorize("hasRole('ROLE_Users')")
     @RequestMapping(value = "/api/todolist", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<String> addNewTodoItem(@RequestBody TodoItem item) {
         item.setID(todoList.size() + 1);

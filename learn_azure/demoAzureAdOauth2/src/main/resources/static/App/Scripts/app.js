@@ -8,7 +8,7 @@ angular.module('todoApp', ['ngRoute', 'AdalAngular'])
         }).when("/TodoList", {
             controller: "todoListCtrl",
             templateUrl: "/App/Views/TodoList.html",
-            requireADLogin: true,
+            requireADLogin: false,
         }).when("/UserData", {
             controller: "userDataCtrl",
             templateUrl: "/App/Views/UserData.html",

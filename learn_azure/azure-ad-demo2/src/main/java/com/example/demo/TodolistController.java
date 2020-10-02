@@ -52,7 +52,7 @@ public class TodolistController {
      * @param item
      * @return
      */
-    ///@PreAuthorize("hasRole('ROLE_Users')")
+    @PreAuthorize("hasRole('ROLE_Users')")
     @RequestMapping(value = "/api/todolist", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<String> addNewTodoItem(@RequestBody TodoItem item) {
         item.setID(todoList.size() + 1);
@@ -79,24 +79,25 @@ public class TodolistController {
     /**
      * HTTP DELETE
      */
+    @PreAuthorize("hasRole('ROLE_Users')")
     @RequestMapping(value = "/api/todolist/{id}", method = RequestMethod.DELETE)
     public ResponseEntity<String> deleteTodoItem(@PathVariable("id") int id,
                                                  PreAuthenticatedAuthenticationToken authToken) {
         final UserPrincipal current = (UserPrincipal) authToken.getPrincipal();
 
-        if (current.isMemberOf(
-                new UserGroup("e030ce49-dc6c-4f0e-b841-61b7f0289663", "Users"))) {
-        	//                 e030ce49-dc6c-4f0e-b841-61b7f0289663
-                //new UserGroup("fa7ad436-d32b-464a-928d-43e642711c6c", "group1"))) {
+//        if (current.isMemberOf(
+//                new UserGroup("e030ce49-dc6c-4f0e-b841-61b7f0289663", "Users"))) {
+//        	//                 e030ce49-dc6c-4f0e-b841-61b7f0289663
+//                //new UserGroup("fa7ad436-d32b-464a-928d-43e642711c6c", "group1"))) {
             final List<TodoItem> find = todoList.stream().filter(i -> i.getID() == id).collect(Collectors.toList());
             if (!find.isEmpty()) {
                 todoList.remove(todoList.indexOf(find.get(0)));
-                return new ResponseEntity<>("OK", HttpStatus.OK);
+                return new ResponseEntity<>("done", HttpStatus.OK);
             }
             return new ResponseEntity<>("Entity not found", HttpStatus.OK);
-        } else {
-            return new ResponseEntity<>("Access is denied", HttpStatus.OK);
-        }
+//        } else {
+//            return new ResponseEntity<>("Access is denied", HttpStatus.OK);
+//        }
 
     }
 

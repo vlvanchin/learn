@@ -9,6 +9,14 @@ angular.module('todoApp', ['ngRoute', 'AdalAngular'])
             controller: "todoListCtrl",
             templateUrl: "/App/Views/TodoList.html",
             requireADLogin: false,
+//            resolve: {
+//                token: ['$http', 'todoListSvc', function ($http, todoListSvc) {
+//                    return $http.get('/.auth/me').then(function (response) {
+//                        todoListSvc.setAuth(response.data[0].access_token);
+//                        return response.data[0].access_token;
+//                    });
+//                }]
+//            },
         }).when("/UserData", {
             controller: "userDataCtrl",
             templateUrl: "/App/Views/UserData.html",
@@ -18,7 +26,7 @@ angular.module('todoApp', ['ngRoute', 'AdalAngular'])
             {
                 instance: 'https://login.microsoftonline.com/',
                 tenant: 'vlvanchin.onmicrosoft.com',
-                clientId: 'e3cfe2d7-4e63-4106-8e3f-d3d058ef7c29',
+                clientId: 'd61473c3-0e92-4626-8b69-2861a6c41fed',
                 cacheLocation: 'localStorage',
             },
             $httpProvider

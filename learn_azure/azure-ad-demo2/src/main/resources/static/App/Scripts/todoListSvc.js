@@ -2,6 +2,9 @@
 angular.module('todoApp')
     .factory('todoListSvc', ['$http', function ($http) {
         return {
+//        	setAuth: function (token) {
+//        	    $http.defaults.headers.common['Authorization'] = 'Bearer ' + token;
+//        	},
             getItems: function () {
                 return $http.get('/api/todolist');
             },

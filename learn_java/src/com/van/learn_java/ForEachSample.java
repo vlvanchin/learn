@@ -34,6 +34,10 @@ public class ForEachSample {
 		MyConsumer action = new MyConsumer();
 		myList.forEach(action);
 		
+		for (Integer obj: myList ) {
+			System.out.println(myList.indexOf(obj) + " : " + obj.longValue());
+		}
+		
 	}
 
 }

@@ -18,7 +18,7 @@ angular.module('todoApp', ['ngRoute', 'AdalAngular'])
             {
                 instance: 'https://login.microsoftonline.com/',
                 tenant: 'vlvanchin.onmicrosoft.com',
-                clientId: 'e3cfe2d7-4e63-4106-8e3f-d3d058ef7c29',
+                clientId: 'd61473c3-0e92-4626-8b69-2861a6c41fed',
                 cacheLocation: 'localStorage',
             },
             $httpProvider

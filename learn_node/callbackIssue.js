@@ -1,6 +1,7 @@
 function concat(a, b, callback) {
 	setTimeout (function () {
 		var r = a + b;
+		console.log('concate',r);
 		callback (r);
 	}, 0);
 }
@@ -8,6 +9,7 @@ function concat(a, b, callback) {
 function upper(a, callback) {
 	setTimeout( function () {
 		var r = a.toUpperCase();
+		console.log('upper',r);
 		callback (r);
 	},0);
 }
@@ -15,6 +17,7 @@ function upper(a, callback) {
 function decor(s, callback) {
 	setTimeout( function () {
 		var r = '*' + s + '*';
+		console.log('decor',r);
 		callback (r)
 	}, 0);
 }

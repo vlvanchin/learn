@@ -9,7 +9,7 @@
 	<name>simpleMVC Maven Webapp</name>
 
 	<properties>
-		<springframework.version>4.3.12.RELEASE</springframework.version>
+		<springframework.version>5.2.20.RELEASE</springframework.version>
 	</properties>
 
 	<url>http://maven.apache.org</url>
